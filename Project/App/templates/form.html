@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block content %}
+{% load crispy_forms_tags%}
+<form class="m-auto w-50" method="post">
+    {% csrf_token %}
+    {{form|crispy}}
+    <input class="btn btn-primary" type="submit" value="Submit"><br>
+    <small>To go back to homepage:<br> <a href="{% url 'HomePage' %}" class="btn btn-sm btn-warning">Click Here</a></small>
+</form>
+{% endblock content %}
