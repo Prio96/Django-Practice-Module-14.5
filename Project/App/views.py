@@ -9,3 +9,6 @@ def viewform(request):
     else:
         form=Form1()
     return render(request,'form.html',{'form':form})
+
+
+    
